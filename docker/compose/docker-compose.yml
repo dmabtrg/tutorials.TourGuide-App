@@ -23,17 +23,20 @@ authzforce:
         - "8080"
 
 idm:
-    image: bitergia/idm-keyrock:5.1.0
+    image: fiware/idm:v5.1.1
     hostname: idm
     links:
         - authzforce
     volumes:
         - /config
+    volumes_from:
+        - tourguide-config
     expose:
         - "5000"
     environment:
         - APP_NAME=TourGuide
         - AUTHZFORCE_VERSION=4.4.1b
+    entrypoint: /tourguide/idm-keyrock/docker-entrypoint.sh
 
 pepwilma:
     image: fiware/pep-proxy:latest
