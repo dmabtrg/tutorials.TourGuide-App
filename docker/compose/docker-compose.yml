@@ -35,7 +35,6 @@ idm:
         - "5000"
     environment:
         - APP_NAME=TourGuide
-        - AUTHZFORCE_VERSION=4.4.1b
     entrypoint: /tourguide/idm-keyrock/docker-entrypoint.sh
 
 pepwilma:
