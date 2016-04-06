@@ -6,6 +6,8 @@ if [ $# -lt 2 ] ; then
     exit 1
 fi
 
+CONFIG_FILE=/config/idm2app.json
+
 # Retrieve X-Auth-Token to make request against the protected resource
 
 function get_token () {
@@ -21,8 +23,8 @@ function get_token () {
 
     # Retrieve Client ID and client Secret Automatically
 
-    CLIENT_ID="$(cat /config/idm2chanchan.json | awk '/id/{print $NF}' | cut -d '"' -f2)"
-    CLIENT_SECRET="$(cat /config/idm2chanchan.json | awk '/secret/{print $NF}' | cut -d '"' -f2)"
+    CLIENT_ID="$(cat ${CONFIG_FILE} | awk '/id/{print $NF}' | cut -d '"' -f2)"
+    CLIENT_SECRET="$(cat ${CONFIG_FILE} | awk '/secret/{print $NF}' | cut -d '"' -f2)"
 
     # Generate the Authentication Header for the request
 

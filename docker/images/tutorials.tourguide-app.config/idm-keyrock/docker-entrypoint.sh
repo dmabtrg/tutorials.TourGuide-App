@@ -178,7 +178,7 @@ if [ $# -eq 0 -o "${1:0:1}" = '-' ] ; then
     check_var MAGIC_KEY daf26216c5434a0a80f392ed9165b3b4
     check_var APP_NAME "TourGuide"
     check_var KEYSTONE_DB /keystone/keystone.db
-    check_var CONFIG_FILE /config/idm2chanchan.json
+    check_var CONFIG_FILE /config/idm2app.json
     check_var PROVISION_FILE /config/keystone_provision.py
     check_var KEYSTONE_VERBOSE no
     check_var HORIZON_PORT 80

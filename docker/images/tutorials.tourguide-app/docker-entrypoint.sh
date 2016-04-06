@@ -12,7 +12,7 @@ check_var TOURGUIDE_HOSTNAME $(hostname)
 
 check_var IDM_HOSTNAME idm
 check_var IDM_PORT 5000
-check_var CONFIG_FILE /config/idm2chanchan.json
+check_var CONFIG_FILE /config/idm2app.json
 
 check_var FIWARE_SERVICE tourguide
 
